@@ -1,2 +1,2 @@
-# naijahacks-backend
-Backend repo for Agrofuse, a naijahacks project
+# naijahacks-agrofuse
+repo for Agrofuse, a naijahacks project
