@@ -12,20 +12,19 @@ const config = {
   secret: process.env.CLIENT_SECRET,
   baseURL: 'http://localhost:3000',
   clientID: process.env.CLIENT_ID,
-  issuerBaseURL: 'https://dev-9lyb4o1h.eu.auth0.com'
+  issuerBaseURL: 'https://dev-9lyb4o1h.eu.auth0.com',
+  
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
+
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
-  res.send( req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
-
-app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
+
 
 
 
