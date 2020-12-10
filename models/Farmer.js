@@ -7,24 +7,15 @@ const FarmerSchema = new Schema({
     type: String,
     required: true,
   },
-  nickname: {
-    type: String,
-  },
-  family_name: {
-    type: String,
-  },
-  given_name: {
-    type: String,
-  },
   email: {
     type: String,
     required: true,
   },
-  email_verified: {
-    type: Boolean,
-    default: false,
+  password: {
+    type: String,
+    required: true,
   },
-  picture: {
+  avatar: {
     type: String,
   },
   date: {
