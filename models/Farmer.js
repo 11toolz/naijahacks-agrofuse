@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Create User Schema
-const UserSchema = new Schema({
+// Create Farmer Schema
+const FarmerSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -24,10 +24,6 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  password: {
-    type: String,
-    required: true,
-  },
   picture: {
     type: String,
   },
@@ -37,4 +33,4 @@ const UserSchema = new Schema({
   },
 });
 
-module.exports = User = mongoose.model("users", UserSchema);
+module.exports = Farmer = mongoose.model("farmers", FarmerSchema);
