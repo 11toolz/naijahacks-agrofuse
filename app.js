@@ -46,6 +46,8 @@ app.use("/api", indexRouter);
 app.use("/api/farmer", farmerRouter);
 app.use("/api/tool", toolRouter);
 
+PORT = 
+
 app.listen(3000, () => {
-  console.log("The server has been created on port 3000");
+  console.log(`The server has been created on port ${process.env.PORT || 3000}`);
 });
